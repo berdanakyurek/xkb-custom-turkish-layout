@@ -1,14 +1,38 @@
-Place custom_layout file in ~/.xkb/symbols directory. After logging out and back in, the new keyboard
-layout will take effect.
+#+TITLE: Custom Turkish Keyboard Layout
+#+OPTIONS: toc:nil
+
+* Overview
+
+A custom XKB keyboard layout (~tc~ — Turkish Custom) built on top of the US QWERTY layout.
+The layout is fully compatible with standard US QWERTY.
+Turkish characters are accessible via an additional modifier key without ever switching layouts.
+
+** Key Features
+
+- *CapsLock ↔ Escape* swap
+- *Turkish characters* accessible via the ~<~ key (ISO_Level3_Shift)
+  | Key | Normal | + Modifier |
+  |-----+--------+------------|
+  | s   | s / S  | ş / Ş      |
+  | c   | c / C  | ç / Ç      |
+  | g   | g / G  | ğ / Ğ      |
+  | u   | u / U  | ü / Ü      |
+  | i   | i / I  | ı / İ      |
+  | o   | o / O  | ö / Ö      |
 
 * Installation
-  - Place tc (Turkish Custom) file in ~/.xkb/symbols.
-  - Edit `~/.config/kxkbrc` and add `tc` to `LayoutList`
-    #+BEGIN_EXAMPLE
-    [Layout]
-    DisplayNames=,,
-    LayoutList=tc,tr,ru
-    ResetOldOptions=true
-    Use=true
-    #+END_EXAMPLE
-  - Log out and log in again. After that you can use your new layout.
+  - Copy the layout file to your XKB symbols directory:
+   #+BEGIN_SRC bash
+   cp tc ~/.xkb/symbols/
+   #+END_SRC
+
+  - Edit =~/.config/kxkbrc= and add =tc= to the layout list:
+   #+BEGIN_EXAMPLE
+   [Layout]
+   DisplayNames=,,
+   LayoutList=tc,tr,ru
+   ResetOldOptions=true
+   Use=true
+   #+END_EXAMPLE
+
+  - Log out and log back in. The new layout will be available in your keyboard settings.
