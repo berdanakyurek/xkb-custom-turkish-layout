@@ -21,18 +21,18 @@ Turkish characters are accessible via an additional modifier key without ever sw
   | o   | o / O  | ö / Ö      |
 
 * Installation
-  - Copy the layout file to your XKB symbols directory:
-   #+BEGIN_SRC bash
-   cp tc ~/.xkb/symbols/
-   #+END_SRC
+  1. Copy the layout file to your XKB symbols directory:
+    #+BEGIN_SRC bash
+    cp tc ~/.xkb/symbols/
+    #+END_SRC
 
-  - Edit =~/.config/kxkbrc= and add =tc= to the layout list:
-   #+BEGIN_EXAMPLE
-   [Layout]
-   DisplayNames=,,
-   LayoutList=tc,tr,ru
-   ResetOldOptions=true
-   Use=true
-   #+END_EXAMPLE
+  2. Edit =~/.config/kxkbrc= and add =tc= to the layout list:
+    #+BEGIN_EXAMPLE
+    [Layout]
+    DisplayNames=,,
+    LayoutList=tc,tr,ru
+    ResetOldOptions=true
+    Use=true
+    #+END_EXAMPLE
 
-  - Log out and log back in. The new layout will be available in your keyboard settings.
+  3. Log out and log back in. The new layout will be available in your keyboard settings.
