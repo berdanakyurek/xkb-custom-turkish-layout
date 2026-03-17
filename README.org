@@ -1,1 +1,14 @@
-Place custom_layout file in ~/.xkb/symbols directory. After logging out and back in, the new keyboard layout will take effect.
+Place custom_layout file in ~/.xkb/symbols directory. After logging out and back in, the new keyboard
+layout will take effect.
+
+* Installation
+  - Place tc (Turkish Custom) file in ~/.xkb/symbols.
+  - Edit `~/.config/kxkbrc` and add `tc` to `LayoutList`
+    #+BEGIN_EXAMPLE
+    [Layout]
+    DisplayNames=,,
+    LayoutList=tc,tr,ru
+    ResetOldOptions=true
+    Use=true
+    #+END_EXAMPLE
+  - Log out and log in again. After that you can use your new layout.

@@ -8,9 +8,11 @@ xkb_symbols "basic" {
     key <ESC>  { [ Caps_Lock ] };
 
     // LSGT to Turkish char shift
-    key <LSGT> { [ ISO_Level3_Shift, ISO_Level3_Shift ] };
+    key <LSGT> {
+        type = "ONE_LEVEL",
+        symbols[Group1] = [ ISO_Level3_Shift ]
+    };
     modifier_map Mod5 { <LSGT> };
-    key.type[Group1] = "FOUR_LEVEL_ALPHABETIC";
 
     key <AC02> { [ s, S, scedilla,  Scedilla  ] }; // s → ş/Ş
     key <AB03> { [ c, C, ccedilla,  Ccedilla  ] }; // c → ç/Ç
